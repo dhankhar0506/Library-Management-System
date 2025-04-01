@@ -1,0 +1,91 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark py-3" style="background: linear-gradient(90deg, #173b98, #8ba15b); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
+  <a class="navbar-brand main-heading font-weight-bold text-white" href="{% url '' %}" 
+  style="font-size: 1.5rem; transition: transform 0.3s ease, color 0.3s ease;"
+  onmouseover="this.style.color='#ffcc00'; this.style.transform='scale(1.1)';"
+  onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+  <i class="fa fa-book mr-2"></i>Library Management System
+  </a>
+  
+  
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+  
+    </button>
+  
+  
+      <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+  
+        
+        <ul class="navbar-nav mr-auto">
+  
+  
+          &nbsp;     &nbsp;     &nbsp; 
+  
+          {% if user.is_authenticated %}
+  
+            <li class="nav-item">
+        
+              <a class="nav-link" href="{% url 'dashboard' %}">Dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+  
+            </li>
+  
+  
+            &nbsp;     &nbsp;     &nbsp; 
+  
+  
+            <li class="nav-item">
+  
+              <a class="nav-link" href="{% url 'user-logout' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+  
+            </li>
+  
+  
+        </ul>
+  
+        {% else %}
+  
+        <li class="nav-item">
+          <a style="background-color: #2d6fa8; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;"
+             href="{% url 'register' %}"
+             onmouseover="this.style.backgroundColor='#1c4d70'; this.style.boxShadow='0 6px 8px rgba(0, 0, 0, 0.2)';"
+             onmouseout="this.style.backgroundColor='#2d6fa8'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
+            Register
+          </a>
+        </li>
+    
+        &nbsp;     &nbsp;     &nbsp; 
+  
+  
+        <li class="nav-item">
+  
+          <a style="background-color: #2d6fa8; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" 
+          href="{% url 'my-login' %}" 
+          onmouseover="this.style.backgroundColor='#1c4d70'; this.style.boxShadow='0 6px 8px rgba(0, 0, 0, 0.2)';" 
+          onmouseout="this.style.backgroundColor='#2d6fa8'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
+          Login
+       </a>
+  
+        </li>
+  
+  
+        {% endif %}
+      
+        
+      </div>
+  
+  
+  </nav>
+
+
+
+

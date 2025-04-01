@@ -1,0 +1,71 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+    <h5> Welcome, {{user}}! 👋 </h5>
+
+    <hr>
+
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'create-record' %}">
+
+        Create a new record &nbsp; <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+    </a>
+
+    <hr> 
+
+    <table class="table table-hover table-bordered">
+
+        <thead class="table-light">
+
+            <tr>
+
+                <th scope="col"> ID </th>
+                <th scope="col"> publication_date </th>
+                <th scope="col"> first_name </th>
+                <th scope="col"> last_name </th>
+                <th scope="col"> Title </th>
+                <th scope="col"> Phone </th>
+                <th scope="col"> Author </th>
+                <th scope="col"> genre </th>
+                <th scope="col"> View </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% if records %}
+
+            {% for record in records %}
+
+            <tr>
+
+                <td> {{record.id}} </td>
+                <td> {{record.publication_date}} </td>
+                <td> {{record.first_name}} </td>
+                <td> {{record.last_name}}</td>
+                <td> {{record.Title}} </td>
+
+                <td> {{record.phone}} </td>
+                <td> {{record.author}} </td>
+                <td> {{record.genre}} </td>
+
+
+                <td> <a class="btn btn-success btn-sm" href="{% url 'record' record.id %}"> <i class="fa fa-eye" aria-hidden="true"></i> </a> </td>
+
+            </tr>
+
+            {% endfor %}
+        
+        {% endif %}
+
+
+        </tbody>
+
+
+    </table>
+
+
+{% endblock %}
