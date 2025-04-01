@@ -14,25 +14,22 @@ The **Library Management System** is a web-based application built using **Djang
 ## 🛠 Tech Stack
 - **Frontend**: 🎨 HTML, CSS
 - **Backend**: 🐍 Django (Python)
-- **Database**: 🗄 SQLite (default) / PostgreSQL / MySQL (configurable)
+- **Database**: 🗄 SQLite (default)
 
 ## 🗂 Models
 The system contains the following models:
 
-### 🎓 Student Model
+### 🎓 Student Model and 📖 Book Model
 | Field Name      | Type     |
-|----------------|----------|
-| Student_regNo  | IntegerField (Primary Key) |
-| student_name   | CharField |
-| phone          | CharField |
-
-### 📖 Book Model
-| Field Name       | Type     |
-|-----------------|----------|
-| title           | CharField |
-| author          | CharField |
-| publication_date| DateField |
-| genre           | CharField |
+|----------------|---------- |
+|publication_date| DateField |
+| first_name     | CharField |
+| last_name      | CharField |
+| title          | CharField |
+| Phone          | CharField |
+| author         | CharField |
+| genre          | CharField |
+| view           | DateField |
 
 ## 🛠 Installation
 1. **📥 Clone the repository**:
