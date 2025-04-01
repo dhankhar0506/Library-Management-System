@@ -29,7 +29,7 @@ The system contains the following models:
 | Phone          | CharField |
 | author         | CharField |
 | genre          | CharField |
-| view           | DateField |
+| view |
 
 ## 🛠 Installation
 1. **📥 Clone the repository**:
